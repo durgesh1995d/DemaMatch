@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DemaMatch</string>
+    <string moduleConfig="true" name="CodePushDeploymentKey">iQ7qxm9Ri8ekOO1xaLhulctuLvRDQH2HhPitL</string>
 </resources>
