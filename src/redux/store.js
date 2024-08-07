@@ -3,14 +3,11 @@ import thunk from 'redux-thunk';
 import rootReducer from './reducers';
 import {composeWithDevTools} from '@redux-devtools/extension';
 import {applyMiddleware, createStore} from 'redux';
-import ExpoFileSystemStorage from 'redux-persist-expo-filesystem';
-import autoMergeLevel2 from 'redux-persist/es/stateReconciler/autoMergeLevel2';
+import storage from '@react-native-async-storage/async-storage';
 
 const persistConfig = {
   key: 'root',
-  storage: ExpoFileSystemStorage,
-  stateReconciler: autoMergeLevel2,
-  whitelist: [],
+  storage,
 };
 
 const pReducer = persistReducer(persistConfig, rootReducer);
